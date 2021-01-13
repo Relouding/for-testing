@@ -1,5 +1,6 @@
     body {
       background-color: #000;
+      background-image: url("../images/background.jpg");
       margin: .0%;
     }
     
@@ -16,15 +17,28 @@
       border-width: 2px;
       border-color: #2E2E2E;
     }
+
+    img {
+      width: 35%;
+      height: auto;
+    }
+
+    /* Responsive layout for mobile - img */
+    @media (max-device-width: 640px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
     
-    /* Container for sections */
+    /* Section */
     section {
       display: -webkit-flex;
       display: flex;
     }
 
     /* Responsive layout for mobile - section */
-    @media (max-device-width: 600px) {
+    @media (max-device-width: 640px) {
       section {
         -webkit-flex-direction: column;
         flex-direction: column;
@@ -43,7 +57,7 @@
     }
 
     /* Responsive layout for mobile - h1 */
-    @media (max-device-width: 600px) {
+    @media (max-device-width: 640px) {
         h1 {
           font-size: 350%;
         }
@@ -61,9 +75,9 @@
     }
 
     /* Responsive layout for mobile - h2 */
-    @media (max-device-width: 600px) {
+    @media (max-device-width: 640px) {
         h2 {
-          font-size: 120%;
+          font-size: 105%;
         }
     }
 
@@ -74,6 +88,34 @@
       text-align: justify;
 
       margin: 5% .0% 5%;
+    }
+
+    /* Responsive layout for mobile - p */
+    @media (max-device-width: 640px) {
+      p {
+        font-size: 90%;
+      }
+    }
+
+    /* Buttons */
+    .button-a {
+      background-color: #B5B6CB;
+      display: inline-block;
+      border: none;
+      padding: 2% 5%;
+      margin: 1% 40% 2%;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 80%;
+      color: #3C4360;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+
+    .button-a:hover {
+      background-color: #3C4360;
+      color: #B5B6CB;
     }
     
     /* Navigation */
@@ -121,6 +163,13 @@
       font-family: bebas;
       font-size: 150%;
     }
+
+    /* Responsive layout for mobile - li a */
+    @media (max-device-width: 640px) {
+      li a {
+        font-size: 180%;
+      }
+    }
     
     /* Ordered list - link - hover */
     li a:hover {
@@ -128,6 +177,21 @@
       transition: transform .3s;
       transform: scale(1.03);
     }
+
+    /* login form */
+    input[type=text] {
+      width: 100%;
+      padding: 1% 1%;
+      margin: .5% 0% 3%;
+      box-sizing: border-box;
+    }
+
+    form {
+      font-family: arial;
+      font-size: 90%;
+      font-weight: bold;
+      color: #B5B6CB;
+    }    
     
     
     /* Content */
@@ -150,14 +214,14 @@
     }
 
     /* Responsive layout for desktop - content */
-    @media (min-device-width: 600px) {
+    @media (min-device-width: 640px) {
         content {
           padding-left: 30%;
           padding-right: 30%;
         }
     }
     
-    /* Style the footer */
+    /* Footer */
     footer {
       background-color: #3C4360;
       padding: 2%;
